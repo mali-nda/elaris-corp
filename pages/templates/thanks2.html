@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load crispy_forms_tags %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+
+    <title>PDE | Thanks</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,500&display=swap');
+
+        .main__container {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .div__1 {
+            font-size: 6rem;
+            align-self: center;
+            padding: 200px 0 100px 0;
+            font-weight: 700;
+            color: #FF7AF5;
+        }
+
+        .div__2 {
+            font-size: 4rem;
+            align-self: center;
+            padding: 200px 0 100px 0;
+            color: #513162;
+        }
+    </style>
+
+ </head>
+<body>
+
+    <div class="main__container">
+        <div class="div__1">
+            Thank You For Applying For Us
+        </div>
+        <div class="div__2">
+            We Will Get Back To You As Soon As Possible
+        </div>
+    </div>
+
+    <script>
+        window.setTimeout(function() {
+        window.location.href = '/joinus';
+        }, 1500);
+    </script>
+
+</body>
+
+</html>

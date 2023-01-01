@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+
+    {% block tags %}
+    {% endblock %}
+
+    {% block title %}
+    <title>PDE | Contact Us</title>
+    {% endblock %}
+
+    {% block extra_css %}
+    	<link rel="stylesheet" href="{% static 'pages/css/contact.css' %}">
+    {% endblock %}
+
+ </head>
+<body>
+
+    {% block content %}
+        <div class="main__container">
+            <div class="top__head">
+                <div class="line__1">
+                    Have A Doubt?
+                </div>
+                <div class="line__2">
+                    Contact Us
+                </div>
+            </div>
+            <div class="middle__div">
+                <div class="form__div">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form | crispy }}
+                        <input class="form__btn" id="form-btn" type="submit" value="Submit" onclick="display()">
+                    </form>
+                </div>
+                <!-- <div class="info__div">
+                    <div class="container__1">
+                        We Want To Hear From You
+                    </div>
+                    <div class="container__2">
+                        <div class="container__2__1">
+                            <img src="" alt="img-1">
+                            <p>Some Stuff</p>
+                        </div>
+                        <div class="container__2__1">
+                            <img src="" alt="img-2">
+                            <p>Some Stuff</p>
+                        </div>
+                        <div class="container__2__1">
+                            <img src="" alt="img-3">
+                            <p>Some Stuff</p>
+                        </div>
+                        <div class="container__2__1">
+                            <img src="" alt="img-4">
+                            <p>Some Stuff</p>
+                        </div>
+                    </div>
+                    <div class="container__3">
+                        <div class="call">
+                            <i class="fa fa-phone"></i>
+                            <p class="c3__call_no">+94 71 33 90000</p>
+                        </div>
+                        <div class="mail">
+                            <i class="fa fa-envelope"></i>
+                            <a href=mailto:shelumin@ominefic.com?>Mail Us</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+    <!-- <div class="popup__container" id="pop-container" >
+        <div class="popup__1">
+            Thank You For Contacting Us
+        </div>
+        <div class="popup__2">            
+             We Will Get Back To You As Soon As Possible
+        </div>
+    </div> -->
+    
+    {% endblock %}
+
+    {% block extra_js %}
+        <script src="{% static 'pages/js/contact.js' %}" ></script>
+    {% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+/* Container holding the image and the text */
+.container {
+    position: relative;
+    z-index: 100;
+  }
+  
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+ /* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+
+  
+    /* Set a specific height */
+    height: 50%;
+    width: 100vw;
+  
+    /* Position and center the image to scale nicely on all screens */
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: .2;
+  } 
+
+.info__head {
+	margin: 20px 0 20px 50px;
+	font-size: 5rem;
+	color:#f0f0f0;
+	animation: fadeIn 3s;
+  z-index: 100;
+}
+
+
+section {
+  z-index: 100;
+  position: relative;
+}
+
+#careers {
+   z-index: 100;
+}
+
+.opening__head {
+  z-index: 300;
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.join__head {
+  z-index: 300;
+  color: #fff;
+}
+
+.job__title {
+  z-index: 700;
+  color: #fff;
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+	0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+
+/* CSS */
+.button-81 {
+  background-color: #0078d0;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  z-index: 100;
+}
+
+.button-81:hover {
+  background-color: #1e293b;
+  color: #0078d0;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .button-81 {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+
+  .info__head {
+    font-size: 1.8rem;
+    margin-left: -10px;
+  }
+
+  .opening__head h1 {
+    font-size: 1.5rem;
+    border: 1px solid #fff;
+  }
+
+  .job__title {
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (max-width:480px) {
+
+	.top__div {
+		height:100%;
+		padding-bottom: 10px;
+	}
+
+	.div__1 {
+		font-size: 1.5rem;
+	}
+	.div__2 {
+		font-size: 1rem;
+	}
+
+	.info__head {
+		font-size: 1rem;
+	}
+
+	.info__div__1, .info__div__2 {
+		font-size: 1.2rem;
+		margin-left: 10px;
+	}
+
+	.crew__wrapper {
+		grid-template-columns: 1fr;
+	}
+
+  .opening__head {
+    font-size: 1rem;
+    margin-right: 100px;
+  }
+
+  .table {
+    margin-right: 100px;
+    width: 10px;
+    font-size: 10px;
+  }
+
+
+}
+
+
+/* CSS */
+.button-71 {
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 40px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 10px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-71:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button-71:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
+}

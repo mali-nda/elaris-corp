@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+
+    {% block tags %}
+    {% endblock %}
+
+    {% block title %}
+    <title>PDE | Age Of Intelligence </title>
+    {% endblock %}m
+
+    {% block extra_css %}
+    	<link rel="stylesheet" href="{% static 'pages/css/index.css' %}">
+    {% endblock %}
+
+ </head>
+<body>
+
+    {% block content %}
+        <div class="main__container">
+           <div class="container__top">
+
+               <div class="top__1" data-aos="fade">
+                    <li class="pde__container">
+                        <ul> A </ul>
+                        <ul> G </ul>
+                        <ul> E </ul>
+                        <ul>   </ul>
+                        <ul> O </ul>
+                        <ul> F </ul>
+                        <ul>   </ul>
+                        <ul> I </ul>
+                        <ul> N </ul>
+                        <ul> T </ul>
+                        <ul> E </ul>
+                        <ul> L </ul>
+                        <ul> L </ul>
+                        <ul> I </ul>
+                        <ul> G </ul>
+                        <ul> E </ul>
+                        <ul> N </ul>
+                        <ul> C </ul>
+                        <ul> E </ul>
+
+                    </li>
+               </div><!-- 
+               <div class="img__top">
+                   <div class="img__wrapper">
+                       <img src="{% static 'pages/img/lap.png' %}" alt="top-img" data-aos="fade" >
+                   </div>
+               </div> -->
+           </div>
+
+            <!-- Solutions -->
+            <div class="sol__container">                
+                <h1> Solutions </h1>
+                <div class="sol__wrapper">
+                    <div class="div__1">
+                        <div class="sol__card">
+                            <h2> Network Solutions </h2>
+                            <p> For All Network Related Solutions</p>
+                            <img src="{% static 'pages/img/optic-fiber.jpg' %}" alt="network-img">
+                            <div class="more__btn">
+                                <a href="{% url 'solutions_view' %}#network-head"> Learn More </a>
+                            </div>
+                        </div>
+                        <div class="sol__card"> 
+                            <h2>  Design & Development </h2>
+                            <p> All Software Related Solutions</p>
+                            <img src="{% static 'pages/img/programmer.jpg' %}" alt="design-img">
+                            <div class="more__btn"> 
+                                <a href="{% url 'solutions_view' %}#design-head" > Learn More </a>
+                            </div>
+                        </div>
+                        <div class="sol__card">
+                            <h2> Data Science & Analytics </h2>
+                            <p>For An Automated Future</p>
+                            <img src="{% static 'pages/img/ai-home1.jpg' %}" alt="data-img" >
+                            <div class="more__btn" >
+                                <a href="{% url 'solutions_view' %}#data-head" > Learn More </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div__2">
+                        <div class="sol__card">
+                            <h2> Training & Development</h2>
+                            <p>For Leaders Of The Future</p>
+                            <img src="{% static 'pages/img/Training-1.jpg' %}" alt="training-img" >
+                            <div class="more__btn" >
+                                <a href="{% url 'solutions_view' %}#training-head"> Learn More </a>
+                            </div>
+                        </div>
+                        <div class="sol__card">
+                            <h2> BlockChain Technology </h2>
+                            <p> For The Future Of Finance </p>
+                            <img src="{% static 'pages/img/bit.jpg' %}" alt="blockchain-img" >
+                            <div class="more__btn" >
+                                <a href="{% url 'solutions_view' %}#blockchain-head" > Learn More </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Join -->
+            <div class="join__container">
+                <h1> Careers </h1>
+                <div class="join__info">
+                    <div class="join__top">
+                        <div class="join__desc">
+                            We Are Hiring !!!
+                        </div>
+                        <div class="join__btn">
+                            <a href="{% url 'join_view' %}"> Join Us </a>
+                        </div>
+                    </div>
+                    <img src="{% static 'pages/img/career.jpg' %}" alt="join-img">
+                </div>
+                <h3>  Current Vacancies </h3>
+                <div class="join__wrapper">
+                    {% for job in jobs %}
+                    <div class="join__card">
+                        <p> {{ job.title }} </p>
+                        <div class="apply__btn">
+                            <a href="{% url 'job_detail' job.id%}"> Apply Now </a>
+                        </div>
+                    </div>
+                    <div class="join__card">
+                        <p> {{ job.title }} </p>
+                        <div class="apply__btn">
+                            <a href="{% url 'job_detail' job.id%}"> Apply Now </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+</body>
+
+</html>

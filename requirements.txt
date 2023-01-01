@@ -1,0 +1,17 @@
+asgiref
+bulma==1.0.1
+certifi==2021.10.8
+Django
+django-bulma==0.8.3
+django-countries==7.3.2
+django-crispy-forms==1.14.0
+django-phonenumber-field==6.1.0
+gunicorn==20.1.0
+Pillow==9.1.0
+psycopg2 
+pytz==2021.3
+sqlparse
+typing_extensions
+whitenoise==6.0.0
+wincertstore==0.2
+django-heroku

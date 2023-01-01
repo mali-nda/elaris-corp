@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+
+    {% block tags %}
+    {% endblock %}
+
+    {% block title %}
+    <title>PDE | Solutions </title>
+    {% endblock %}
+
+    {% block extra_css %}
+    	<link rel="stylesheet" href="{% static 'pages/css/solutions.css' %}">
+    {% endblock %}
+
+ </head>
+<body>
+
+    {% block content %}
+        <div class="main__container">
+            <div class="top__container">
+                    <div class="top__head">
+                        Our Technology Partners
+                    </div>
+                <img src="{% static 'pages/img/back_1.png' %}" alt="">               
+               <div class="top__desc">
+                   <div class="top__1">
+                       <img class="" alt="top-img" src="{% static 'pages/img/cloud-computing.png' %}" />
+                   </div>
+                   <div class="top__2">
+                        Working closely with the world’s Technology Leaders to bring you the best solutions.
+                   </div>
+                   <div class="top__3">
+                       <img class="" alt="top-img" src="{% static 'pages/img/design-software.png' %}" />
+                   </div>
+               </div>
+            </div>  
+           
+           
+           
+        </div>
+    {% endblock %}
+
+    {% block extra_js %}
+        <script src="{% static 'pages/js/solutions.js' %}" ></script>
+        <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    {% endblock %}
+
+</body>
+
+</html>

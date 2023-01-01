@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+
+    {% block tags %}
+    {% endblock %}
+
+    {% block title %}
+    <title>PDE </title>
+    {% endblock %}
+
+    <link rel="icon" href="{% static 'pages/img/pdec-logo-white-favicon.png' %}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+        /* @font-face {
+            src: url("fonts/merlo-regular.ttf");
+        } */
+
+        * {
+           font-family: 'Poppins', sans-serif;
+           /* font-family: Merlo; */
+            color: #fff;
+        }
+
+        /* width */
+        ::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px #fff;
+          border-radius: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #000046;
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #53526c;
+        }
+
+        #myVideo {
+            z-index: 1;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+</style>
+
+
+    {% block extra_css %}
+
+    {% endblock %}
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1204727377069814');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1204727377069814&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+ </head>
+<body class="body">
+    <video autoplay muted loop id="myVideo">
+            <source src="{% static 'pages/vid/web-back01.mp4' %}" type="video/mp4">
+    </video>
+
+    {% include 'navbar.html' %}
+
+
+    {% block content %}
+        Some Content
+    {% endblock %}
+
+    {% include 'footer.html' %} 
+
+    {% block extra_js %}
+    {% endblock %}
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 3000,
+        });
+    </script>
+    
+</body>
+
+</html>
